@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "pages",
     "personal_website",
     "company_website",
+    "posts",
 ]
 
 MIDDLEWARE = [
