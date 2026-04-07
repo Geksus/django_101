@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>Company home page</h1>
+<p>The current date and time is {% now "DATETIME_FORMAT" %}</p>
+<p>There are {{ inventory_list|length }} items in the inventory.</p>
+<ul>
+    {% for item in inventory_list %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+<p>{{ greeting }}</p>
+{% comment %}Add more content here{% endcomment %}
+</body>
+</html>
+{% endblock %}

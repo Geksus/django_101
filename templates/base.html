@@ -8,14 +8,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>About</h1>
-
-    <h2>Hello, {{ name }}!</h2>
-    <h3>Your age is {{ age }} years old</h3>
-
+<header>
     <div>
-        <p>This is the about page.</p>
-        <p>This page is all about me</p>
+        <a href={% url 'cw_home_page' %}>Company home | </a>
+        <a href={% url 'cw_about_page' %}>Company about | </a>
+        <a href={% url 'pw_about' %}>Personal about | </a>
+        <a href="{% url 'hw_home_page' %}">Hello, world!</a>
     </div>
+</header>
+{% block content %}{% endblock %}
 </body>
 </html>
