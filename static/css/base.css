@@ -1,0 +1,17 @@
+.post-author {
+    color: darkcyan;
+}
+
+.post-title {
+    color: darkred;
+}
+
+.post-body {
+    color: darkblue;
+}
+
+.post {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}

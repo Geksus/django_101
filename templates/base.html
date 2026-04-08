@@ -1,4 +1,5 @@
 <!doctype html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,10 +7,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
 <header>
     <div>
+        <a href={% url 'blog_home' %}>Blog | </a>
+        <a href={% url 'blog_create' %}>Create post | </a>
         <a href={% url 'cw_home_page' %}>Company home | </a>
         <a href={% url 'cw_about_page' %}>Company about | </a>
         <a href={% url 'pw_about' %}>Personal about | </a>

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <ul>
+        {% for blog_post in blog_posts %}
+            <li>
+                <div class="post">
+                    <div class="post-author">{{ blog_post.author }}</div>
+                    <div class="post-title"><a href="{{ blog_post.get_absolute_url }}">{{ blog_post.title }}</a></div>
+                    <a href="{% url 'blog_update' blog_post.id %}">Update</a>
+                    <a href="{% url 'blog_delete' blog_post.id %}">Delete</a>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
