@@ -1,5 +1,11 @@
 from django.urls import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView
+from django.views.generic import (
+    ListView,
+    DetailView,
+    CreateView,
+    DeleteView,
+    UpdateView,
+)
 
 from .models import BlogPost
 
@@ -30,7 +36,7 @@ class BlogUpdateView(UpdateView):
 
 class BlogDeleteView(DeleteView):
     model = BlogPost
-    success_url = reverse_lazy('blog_home')
+    success_url = reverse_lazy("blog_home")
 
     def get(self, request, *args, **kwargs):
         return self.delete(request, *args, **kwargs)

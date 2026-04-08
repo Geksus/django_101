@@ -16,6 +16,7 @@ class HomepageTests(SimpleTestCase):
         self.assertContains(response, "Company home page")
         self.assertTemplateUsed(response, "cw_home.html")
 
+
 class AboutPageTests(SimpleTestCase):
     def test_url_exists_at_correct_location(self):
         response = self.client.get("/c-about")

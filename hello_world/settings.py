@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     "company_website",
     "posts",
     "blog",
+    "accounts",
 ]
 
 MIDDLEWARE = [
@@ -125,5 +126,7 @@ STATICFILES_DIRS = [BASE_DIR / "static"]
 
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/p-about"
+
+SIGNUP_URL = "/accounts/signup/"
 
 LOGOUT_REDIRECT_URL = "/"
