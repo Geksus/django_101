@@ -52,6 +52,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "hello_world.middleware.LoginRequiredMiddleware",
 ]
 
 ROOT_URLCONF = "hello_world.urls"
@@ -121,3 +122,8 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]
+
+LOGIN_URL = "/accounts/login/"
+LOGIN_REDIRECT_URL = "/p-about"
+
+LOGOUT_REDIRECT_URL = "/"
